@@ -72,8 +72,8 @@ export default function HomePage() {
             transition={{ duration: 0.7 }}
             className="relative w-full max-w-sm sm:max-w-md mx-auto lg:mx-0"
           >
-            <Image
-              src="/placeholder.svg?height=600&width=500"
+            <img
+              src="https://res.cloudinary.com/docvcxodh/image/upload/v1753934166/IMG_2572_i7w0o9.jpg"
               alt="Монгол дээл"
               width={500}
               height={600}
@@ -611,7 +611,11 @@ export default function HomePage() {
             <div>
               <div className="flex items-center space-x-3 mb-4">
                 <div className="w-10 h-10 bg-amber-400 rounded-full flex items-center justify-center">
-                  <Scissors className="w-5 h-5 text-blue-900" />
+                  <img
+                    src="https://res.cloudinary.com/docvcxodh/image/upload/v1753931682/d1a5d825-4848-40c7-9e49-e448bec0e176_fb5c1t.jpg"
+                    alt="Logo"
+                    className="object-cover rounded-full w-12 h-12"
+                  />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold">Одод Урлан</h3>
