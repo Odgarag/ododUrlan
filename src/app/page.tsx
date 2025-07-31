@@ -32,24 +32,24 @@ export default function HomePage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-24 bg-gradient-to-r from-[#fef6e4] via-[#fde68a] to-[#fef6e4] text-gray-900">
+      <section className="relative overflow-hidden py-16 sm:py-24 bg-gradient-to-r from-[#fef6e4] via-[#fde68a] to-[#fef6e4] text-gray-900">
         <div className="absolute inset-0 bg-white/20" />
-        <div className="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
-            className="space-y-6"
+            className="space-y-4 sm:space-y-6 text-center lg:text-left"
           >
-            <h2 className="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight text-gray-800">
-              Монголын уламжлалт <br />
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight tracking-tight text-gray-800">
+              Монголын уламжлалт <br className="hidden sm:block" />
               <span className="text-[#eab308]">хувцас</span>
             </h2>
-            <p className="text-lg text-gray-600 leading-relaxed max-w-xl">
+            <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-md sm:max-w-xl mx-auto lg:mx-0">
               Өв соёлоо орчин үетэй хослуулан чанартай, үзэсгэлэнтэй дээл, цамц,
               чимэглэлийг хийж байна.
             </p>
-            <div className="flex gap-4 flex-wrap">
+            <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 sm:gap-4">
               <Button
                 size="lg"
                 className="bg-[#eab308] text-white font-semibold shadow-md hover:bg-[#d4a106]"
@@ -70,14 +70,14 @@ export default function HomePage() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
-            className="relative"
+            className="relative w-full max-w-sm sm:max-w-md mx-auto lg:mx-0"
           >
             <Image
               src="/placeholder.svg?height=600&width=500"
               alt="Монгол дээл"
               width={500}
               height={600}
-              className="rounded-2xl shadow-xl border border-gray-200"
+              className="rounded-2xl shadow-xl border border-gray-200 w-full h-auto object-cover"
             />
           </motion.div>
         </div>
@@ -514,41 +514,49 @@ export default function HomePage() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="relative">
+      <section id="about" className="py-16 sm:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 items-center">
+            <div className="relative w-full max-w-md mx-auto lg:mx-0">
               <Image
                 src="/placeholder.svg?height=500&width=600"
                 alt="Одод Урлан цех"
                 width={600}
                 height={500}
-                className="rounded-lg shadow-xl"
+                className="rounded-lg shadow-xl w-full h-auto object-cover"
               />
             </div>
             <div>
-              <h2 className="text-4xl font-bold text-blue-900 mb-6">
+              <h2 className="text-3xl sm:text-4xl font-bold text-blue-900 mb-4 sm:mb-6">
                 Бидний тухай
               </h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+              <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6 leading-relaxed">
                 "Одод Урлан" нь 2008 онд байгуулагдсан монголын уламжлалт
                 хувцас, гоёл чимэглэлийн цех юм. Бид өвөг дээдсийн уламжлалыг
                 хадгалж, орчин үеийн хэрэгцээнд нийцүүлэн өвөрмөц бүтээгдэхүүн
                 бүтээж байна.
               </p>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 leading-relaxed">
                 Манай багт мэргэжлийн оёдолчид, загвар зохион бүтээгчид ажиллаж,
                 чанартай материал ашиглан гар урлалын өндөр түвшинд хүрсэн
                 бүтээгдэхүүн үйлдвэрлэж байна.
               </p>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div className="text-center p-4 bg-blue-50 rounded-lg">
-                  <h3 className="text-2xl font-bold text-blue-900">15+</h3>
-                  <p className="text-gray-600">Жилийн туршлага</p>
+                  <h3 className="text-xl sm:text-2xl font-bold text-blue-900">
+                    15+
+                  </h3>
+                  <p className="text-gray-600 text-sm sm:text-base">
+                    Жилийн туршлага
+                  </p>
                 </div>
                 <div className="text-center p-4 bg-amber-50 rounded-lg">
-                  <h3 className="text-2xl font-bold text-blue-900">500+</h3>
-                  <p className="text-gray-600">Сэтгэл хангалуун үйлчлүүлэгч</p>
+                  <h3 className="text-xl sm:text-2xl font-bold text-blue-900">
+                    500+
+                  </h3>
+                  <p className="text-gray-600 text-sm sm:text-base">
+                    Сэтгэл хангалуун үйлчлүүлэгч
+                  </p>
                 </div>
               </div>
             </div>
@@ -672,7 +680,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="border-t border-blue-800 mt-8 pt-8 text-center">
-            <p>&copy; 2024 Одод Урлан. Бүх эрх хуулиар хамгаалагдсан.</p>
+            <p>&copy; 2025 Одод Урлан. Бүх эрх хуулиар хамгаалагдсан.</p>
           </div>
         </div>
       </footer>
